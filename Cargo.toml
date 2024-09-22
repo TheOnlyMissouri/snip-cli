@@ -1,0 +1,22 @@
+
+[package]
+name = "snip-cli"
+version = "0.1.0"
+edition = "2021"
+description = "A lightweight command-line tool in Rust called snipcli that allows developers to manage, store, and retrieve code snippets directly from the terminal. This tool helps in organizing reusable code blocks, improving productivity by making frequently used snippets easily accessible."
+keywords = ["cli", "snippet", "manager", "rust", "developer-tools"]
+
+
+# Dependencies required for the project
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }        # For serialization/deserialization
+serde_json = "1.0"                                        # For JSON handling
+directories = "5.0"                                       # To determine user directories for storage
+thiserror = "1.0"                                         # For error handling
+colored = "2.0"                                           # For colored terminal output
+clap = { version = "4.5.18", features = ["derive"] }
+
+# Optional: Dependencies for development and testing
+[dev-dependencies]
+assert_cmd = "2.0"                                        # For integration testing of CLI
+tempfile = "3.3"
